@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Enhanced Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; img-src 'self' data: https:; font-src 'self'; connect-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=()">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Our mission and vision: helping infrastructure owners in Atlantic Canada maximize the safe service life of their assets.">
+    <meta name="author" content="Struvisor Asset and Project Management Inc.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.struvisor.ca/mission.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.struvisor.ca/mission.html">
+    <meta property="og:title" content="Mission & Vision - Struvisor Asset and Project Management Inc.">
+    <meta property="og:description" content="Owner-focused quality in every infrastructure project. Based in Halifax, Nova Scotia.">
+    <meta property="og:site_name" content="Struvisor">
+    <meta property="og:image" content="https://www.struvisor.ca/logo-blue.png">
+
+    <title>Mission & Vision - Struvisor Asset and Project Management Inc.</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        html { scroll-behavior: smooth; scroll-padding-top: 7rem; }
+        .gradient-bg { background: linear-gradient(135deg, #0056B3 0%, #003d82 100%); }
+        .service-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, #0056B3 0%, #0066cc 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.25rem;
+        }
+        .service-icon svg { width: 32px; height: 32px; fill: white; }
+    
+        /* Scroll-reveal animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(36px);
+            transition: opacity 1.4s ease-out, transform 1.4s ease-out, box-shadow .3s ease;
+        }
+        .reveal.visible { opacity: 1; transform: none; }
+        @media (prefers-reduced-motion: reduce) {
+            .reveal { opacity: 1; transform: none; transition: none; }
+        }
+        /* Mobile menu */
+        @keyframes menuIn { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }
+        .menu-open { animation: menuIn .25s ease-out; }
+        /* Hero text over the carousel: plays once when the page opens */
+        @keyframes heroIn { from { opacity: 0; transform: translateY(36px); } to { opacity: var(--hero-op, 1); transform: none; } }
+        .hero-in { opacity: 0; animation: heroIn 1.6s ease-out forwards; }
+        @media (prefers-reduced-motion: reduce) { .hero-in { opacity: var(--hero-op, 1); animation: none; } }
+    </style>
+</head>
+<body class="font-sans antialiased">
+    <!-- Navigation (full width tabs + mobile hamburger) -->
+    <nav class="fixed top-0 w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-6 py-2 flex items-center justify-between">
+            <a href="index.html" class="flex items-center">
+                <img src="logo-blue.png" alt="Struvisor Logo" class="h-12">
+            </a>
+            <button id="menu-toggle" type="button" class="md:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-600" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+                <svg class="icon-open w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+                <svg class="icon-close hidden w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+            </button>
+        </div>
+        <ul id="nav-menu" class="hidden md:flex flex-col md:flex-row w-full border-t border-gray-200 divide-y md:divide-y-0 md:divide-x divide-gray-200 md:overflow-x-auto">
+                <li class="flex-1">
+                    <a href="index.html#home" class="block px-3 py-3 text-base text-center whitespace-nowrap text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition">Home</a>
+                </li>
+                <li class="flex-1">
+                    <a href="mission.html" aria-current="page" class="block px-3 py-3 text-base text-center whitespace-nowrap gradient-bg text-white font-semibold">Mission & Vision</a>
+                </li>
+                <li class="flex-1">
+                    <a href="index.html#services" class="block px-3 py-3 text-base text-center whitespace-nowrap text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition">Services</a>
+                </li>
+                <li class="flex-1">
+                    <a href="customers.html" class="block px-3 py-3 text-base text-center whitespace-nowrap text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition">Projects</a>
+                </li>
+                <li class="flex-1">
+                    <a href="index.html#values" class="block px-3 py-3 text-base text-center whitespace-nowrap text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition">Values</a>
+                </li>
+                <li class="flex-1">
+                    <a href="contact.html" class="block px-3 py-3 text-base text-center whitespace-nowrap text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition">Contact</a>
+                </li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <section class="gradient-bg text-white pt-40 pb-16">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-5xl font-bold mb-4">Mission & Vision</h1>
+            <p class="text-xl max-w-3xl mx-auto">What drives us, and where we are headed.</p>
+            <p class="text-lg mt-4 opacity-90">Based in Halifax, Nova Scotia</p>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Mission -->
+                <div class="bg-white p-10 rounded-lg shadow-lg hover:shadow-xl transition">
+                    <div class="service-icon">
+                        <!-- Flag icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z"/></svg>
+                    </div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Mission</h2>
+                    <p class="text-lg text-gray-700">We help infrastructure owners maximize the safe service life of their assets through rigorous, owner-focused quality in every project.</p>
+                </div>
+
+                <!-- Vision -->
+                <div class="bg-white p-10 rounded-lg shadow-lg hover:shadow-xl transition">
+                    <div class="service-icon">
+                        <!-- Eye icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+                    </div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Vision</h2>
+                    <p class="text-lg text-gray-700">To be the go-to infrastructure advisor for owners who value quality and owner-focused solutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to action -->
+    <section class="gradient-bg text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-4">Let's Work Together</h2>
+            <p class="text-xl max-w-2xl mx-auto mb-8">Tell us about your infrastructure needs and we will get back to you.</p>
+            <a href="contact.html" class="inline-block bg-white text-blue-700 font-bold py-3 px-8 rounded-lg shadow hover:shadow-xl transition">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <img src="logo-black.png" alt="Struvisor Logo" class="h-12 mx-auto mb-4">
+            <p class="text-gray-600">&copy; 2025 Struvisor Asset and Project Management Inc. All rights reserved.</p>
+            <p class="text-gray-500 mt-2">Structural Oversight, Client Insight</p>
+        </div>
+    </footer>
+    <script>
+        (function () {
+            /* ---------- Mobile hamburger menu ---------- */
+            var btn = document.getElementById('menu-toggle');
+            var menu = document.getElementById('nav-menu');
+            if (btn && menu) {
+                var iconOpen = btn.querySelector('.icon-open');
+                var iconClose = btn.querySelector('.icon-close');
+                var setMenu = function (open) {
+                    menu.classList.toggle('hidden', !open);
+                    menu.classList.toggle('menu-open', open);
+                    btn.setAttribute('aria-expanded', String(open));
+                    iconOpen.classList.toggle('hidden', open);
+                    iconClose.classList.toggle('hidden', !open);
+                };
+                btn.addEventListener('click', function () { setMenu(menu.classList.contains('hidden')); });
+                menu.querySelectorAll('a').forEach(function (a) {
+                    a.addEventListener('click', function () { setMenu(false); });
+                });
+                document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+            }
+
+            /* ---------- Scroll-reveal animation ---------- */
+            if (!('IntersectionObserver' in window)) return;
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+            var targets = [];
+            document.querySelectorAll('section .container > *').forEach(function (el) {
+                if (el.classList.contains('hero-in')) return;   // animated on load by CSS
+                if (el.matches('.grid')) {
+                    Array.prototype.forEach.call(el.children, function (c) { targets.push(c); });
+                } else {
+                    targets.push(el);
+                }
+            });
+
+            var io = new IntersectionObserver(function (entries) {
+                var n = 0;
+                entries.forEach(function (entry) {
+                    if (!entry.isIntersecting) return;
+                    var el = entry.target;
+                    var delay = n * 200;   // stagger elements that appear together
+                    n++;
+                    io.unobserve(el);
+                    el.style.transitionDelay = delay + 'ms';
+                    el.classList.add('visible');
+                    // restore normal hover transitions once the animation ends
+                    setTimeout(function () {
+                        el.classList.remove('reveal', 'visible');
+                        el.style.transitionDelay = '';
+                    }, delay + 1600);
+                });
+            }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+            targets.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+        })();
+    </script>
+</body>
+</html>

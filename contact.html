@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Enhanced Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://formspree.io; frame-ancestors 'self'; base-uri 'self'; form-action 'self' https://formspree.io;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=()">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Contact Struvisor Asset and Project Management Inc. Tell us about your infrastructure project in Atlantic Canada.">
+    <meta name="author" content="Struvisor Asset and Project Management Inc.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.struvisor.ca/contact.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.struvisor.ca/contact.html">
+    <meta property="og:title" content="Contact - Struvisor Asset and Project Management Inc.">
+    <meta property="og:description" content="Tell us about your infrastructure project. Based in Halifax, Nova Scotia.">
+    <meta property="og:site_name" content="Struvisor">
+    <meta property="og:image" content="https://www.struvisor.ca/logo-blue.png">
+
+    <title>Contact - Struvisor Asset and Project Management Inc.</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        html { scroll-behavior: smooth; scroll-padding-top: 7rem; }
+        .gradient-bg { background: linear-gradient(135deg, #0056B3 0%, #003d82 100%); }
+        .service-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #0056B3 0%, #0066cc 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .service-icon svg { width: 28px; height: 28px; fill: white; }
+        .field:focus {
+            outline: none;
+            border-color: #0056B3;
+            box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.2);
+        }
+    
+        /* Scroll-reveal animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(36px);
+            transition: opacity 1.4s ease-out, transform 1.4s ease-out, box-shadow .3s ease;
+        }
+        .reveal.visible { opacity: 1; transform: none; }
+        @media (prefers-reduced-motion: reduce) {
+            .reveal { opacity: 1; transform: none; transition: none; }
+        }
+        /* Mobile menu */
+        @keyframes menuIn { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }
+        .menu-open { animation: menuIn .25s ease-out; }
+        /* Hero text over the carousel: plays once when the page opens */
+        @keyframes heroIn { from { opacity: 0; transform: translateY(36px); } to { opacity: var(--hero-op, 1); transform: none; } }
+        .hero-in { opacity: 0; animation: heroIn 1.6s ease-out forwards; }
+        @media (prefers-reduced-motion: reduce) { .hero-in { opacity: var(--hero-op, 1); animation: none; } }
+    </style>
+</head>
+<body class="font-sans antialiased">
+    <!-- Navigation (full width tabs + mobile hamburger) -->
+    <nav class="fixed top-0 w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-6 py-2 flex items-center justify-between">
+            <a href="index.html" class="flex items-center">
+                <img src="logo-blue.png" alt="Struvisor Logo" class="h-12">
+            </a>
+            <button id="menu-toggle" type="button" class="md:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-600" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+                <svg class="icon-open w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+                <svg class="icon-close hidden w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+            </button>
+        </div>
+        <ul id="nav-menu" class="hidden md:flex flex-col md:flex-row w-full border-t border-gray-200 divide-y md:divide-y-0 md:divide-x divide-gray-200 md:overflow-x-auto">
+                <li class="flex-1">
+                    <a href="index.html#home" class="block px-3 py-3 text-base text-center whitespace-nowrap text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition">Home</a>
+                </li>
+                <li class="flex-1">
+                    <a href="mission.html" class="block px-3 py-3 text-base text-center whitespace-nowrap text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition">Mission & Vision</a>
+                </li>
+                <li class="flex-1">
+                    <a href="index.html#services" class="block px-3 py-3 text-base text-center whitespace-nowrap text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition">Services</a>
+                </li>
+                <li class="flex-1">
+                    <a href="customers.html" class="block px-3 py-3 text-base text-center whitespace-nowrap text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition">Projects</a>
+                </li>
+                <li class="flex-1">
+                    <a href="index.html#values" class="block px-3 py-3 text-base text-center whitespace-nowrap text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition">Values</a>
+                </li>
+                <li class="flex-1">
+                    <a href="contact.html" aria-current="page" class="block px-3 py-3 text-base text-center whitespace-nowrap gradient-bg text-white font-semibold">Contact</a>
+                </li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <section class="gradient-bg text-white pt-32 pb-16">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-5xl font-bold mb-4">Contact Us</h1>
+            <p class="text-xl max-w-3xl mx-auto">Tell us about your project and we will get back to you.</p>
+            <p class="text-lg mt-4 opacity-90">Based in Halifax, Nova Scotia</p>
+        </div>
+    </section>
+
+    <!-- Form -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+                <div class="service-icon mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                    </svg>
+                </div>
+                <h2 class="text-3xl font-bold text-gray-900 mb-2">Request Information</h2>
+                <p class="text-gray-600 mb-8">Fill out the form below and we will get back to you as soon as possible.</p>
+
+                <form id="contact-form" action="https://formspree.io/f/xwllavar" method="POST" novalidate>
+                    <input type="hidden" name="_subject" value="New website inquiry - Struvisor">
+                    <!-- Honeypot (hidden from people, traps bots) -->
+                    <div class="hidden" aria-hidden="true">
+                        <label>Leave this field empty <input type="text" id="website" name="_gotcha" tabindex="-1" autocomplete="off"></label>
+                    </div>
+
+                    <div class="mb-6">
+                        <label for="name" class="block text-gray-900 font-semibold mb-2">Name</label>
+                        <input type="text" id="name" name="name" required maxlength="100" autocomplete="name"
+                               class="field w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-700 transition"
+                               placeholder="Your full name">
+                    </div>
+
+                    <div class="mb-6">
+                        <label for="city" class="block text-gray-900 font-semibold mb-2">City</label>
+                        <input type="text" id="city" name="city" required maxlength="100" autocomplete="address-level2"
+                               class="field w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-700 transition"
+                               placeholder="e.g. Halifax, NS">
+                    </div>
+
+                    <div class="mb-6">
+                        <label for="email" class="block text-gray-900 font-semibold mb-2">Email</label>
+                        <input type="email" id="email" name="email" required maxlength="150" autocomplete="email"
+                               class="field w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-700 transition"
+                               placeholder="you@example.com">
+                    </div>
+
+                    <div class="mb-6">
+                        <label for="message" class="block text-gray-900 font-semibold mb-2">Services you need</label>
+                        <textarea id="message" name="message" rows="5" required maxlength="1500"
+                                  class="field w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-700 transition"
+                                  placeholder="Briefly describe the services or project you need help with (e.g. bridge inspection, construction quality assurance, project management...)"></textarea>
+                    </div>
+
+                    <p id="form-error" class="hidden text-red-600 mb-4" role="alert"></p>
+
+                    <button type="submit"
+                            class="gradient-bg text-white font-bold py-3 px-8 rounded-lg shadow hover:shadow-xl transition w-full">
+                        Send Message
+                    </button>
+                </form>
+
+                <div id="form-success" class="hidden mt-6 p-4 rounded-lg bg-blue-50 text-gray-700" role="status"></div>
+            </div>
+
+            <!-- Other ways to reach us -->
+            <div class="max-w-2xl mx-auto mt-8 grid md:grid-cols-2 gap-6 text-center">
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="font-bold text-gray-900 mb-2">Email</h3>
+                    <a href="mailto:info@struvisor.ca" class="text-blue-600 hover:underline">info@struvisor.ca</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="font-bold text-gray-900 mb-2">LinkedIn</h3>
+                    <a href="https://www.linkedin.com/company/Struvisor" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">linkedin.com/company/Struvisor</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <img src="logo-black.png" alt="Struvisor Logo" class="h-12 mx-auto mb-4">
+            <p class="text-gray-600">&copy; 2025 Struvisor Asset and Project Management Inc. All rights reserved.</p>
+            <p class="text-gray-500 mt-2">Structural Oversight, Client Insight</p>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            const ENDPOINT = 'https://formspree.io/f/xwllavar';
+            const form = document.getElementById('contact-form');
+            const errorBox = document.getElementById('form-error');
+            const successBox = document.getElementById('form-success');
+            const button = form.querySelector('button[type="submit"]');
+
+            form.addEventListener('submit', async function (e) {
+                e.preventDefault();
+                errorBox.classList.add('hidden');
+                successBox.classList.add('hidden');
+
+                // Honeypot: bots fill this in, people never see it
+                if (document.getElementById('website').value) return;
+
+                const name = document.getElementById('name').value.trim();
+                const city = document.getElementById('city').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const message = document.getElementById('message').value.trim();
+
+                if (!name || !city || !email || !message) {
+                    return showError('Please fill in all fields.');
+                }
+                if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                    return showError('Please enter a valid email address.');
+                }
+
+                button.disabled = true;
+                button.textContent = 'Sending...';
+
+                try {
+                    const res = await fetch(ENDPOINT, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                        body: JSON.stringify({
+                            name: name,
+                            city: city,
+                            email: email,
+                            message: message,
+                            _subject: 'New website inquiry from ' + name
+                        })
+                    });
+
+                    if (!res.ok) {
+                        let detail = '';
+                        try {
+                            const data = await res.json();
+                            if (data.errors) detail = data.errors.map(function (er) { return er.message; }).join(' ');
+                        } catch (_) {}
+                        throw new Error(detail || 'Request failed');
+                    }
+
+                    form.reset();
+                    successBox.textContent = 'Thank you! Your message has been sent. We will get back to you soon.';
+                    successBox.classList.remove('hidden');
+                } catch (err) {
+                    showError('Something went wrong. Please try again or email us at info@struvisor.ca.');
+                } finally {
+                    button.disabled = false;
+                    button.textContent = 'Send Message';
+                }
+            });
+
+            function showError(text) {
+                errorBox.textContent = text;
+                errorBox.classList.remove('hidden');
+            }
+        })();
+    </script>
+    <script>
+        (function () {
+            /* ---------- Mobile hamburger menu ---------- */
+            var btn = document.getElementById('menu-toggle');
+            var menu = document.getElementById('nav-menu');
+            if (btn && menu) {
+                var iconOpen = btn.querySelector('.icon-open');
+                var iconClose = btn.querySelector('.icon-close');
+                var setMenu = function (open) {
+                    menu.classList.toggle('hidden', !open);
+                    menu.classList.toggle('menu-open', open);
+                    btn.setAttribute('aria-expanded', String(open));
+                    iconOpen.classList.toggle('hidden', open);
+                    iconClose.classList.toggle('hidden', !open);
+                };
+                btn.addEventListener('click', function () { setMenu(menu.classList.contains('hidden')); });
+                menu.querySelectorAll('a').forEach(function (a) {
+                    a.addEventListener('click', function () { setMenu(false); });
+                });
+                document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+            }
+
+            /* ---------- Scroll-reveal animation ---------- */
+            if (!('IntersectionObserver' in window)) return;
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+            var targets = [];
+            document.querySelectorAll('section .container > *').forEach(function (el) {
+                if (el.classList.contains('hero-in')) return;   // animated on load by CSS
+                if (el.matches('.grid')) {
+                    Array.prototype.forEach.call(el.children, function (c) { targets.push(c); });
+                } else {
+                    targets.push(el);
+                }
+            });
+
+            var io = new IntersectionObserver(function (entries) {
+                var n = 0;
+                entries.forEach(function (entry) {
+                    if (!entry.isIntersecting) return;
+                    var el = entry.target;
+                    var delay = n * 200;   // stagger elements that appear together
+                    n++;
+                    io.unobserve(el);
+                    el.style.transitionDelay = delay + 'ms';
+                    el.classList.add('visible');
+                    // restore normal hover transitions once the animation ends
+                    setTimeout(function () {
+                        el.classList.remove('reveal', 'visible');
+                        el.style.transitionDelay = '';
+                    }, delay + 1600);
+                });
+            }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+            targets.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+        })();
+    </script>
+</body>
+</html>

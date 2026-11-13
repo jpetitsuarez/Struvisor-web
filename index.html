@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Enhanced Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; img-src 'self' data: https:; font-src 'self'; connect-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=()">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="We help infrastructure owners in Atlantic Canada maximize the safe service life of their assets through rigorous, owner-focused quality in every project.">
+    <meta name="keywords" content="infrastructure management, bridge inspection, construction quality assurance, project management, asset management, Halifax, Nova Scotia, OSIM, CCDC">
+    <meta name="author" content="Struvisor Asset and Project Management Inc.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.struvisor.ca">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.struvisor.ca">
+    <meta property="og:title" content="Struvisor Asset and Project Management Inc. - Structural Oversight, Client Insight">
+    <meta property="og:description" content="Excellence in Infrastructure Preservation - Based in Halifax, Nova Scotia">
+    <meta property="og:site_name" content="Struvisor">
+    <meta property="og:image" content="https://www.struvisor.ca/logo-blue.png">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Struvisor Asset and Project Management Inc.">
+    <meta name="twitter:description" content="Excellence in Infrastructure Preservation - Based in Halifax, Nova Scotia">
+    <meta name="twitter:image" content="https://www.struvisor.ca/logo-blue.png">
+    
+    <title>Struvisor Asset and Project Management Inc. - Structural Oversight, Client Insight</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        html { scroll-behavior: smooth; scroll-padding-top: 7rem; }
+        .gradient-bg { background: linear-gradient(135deg, #0056B3 0%, #003d82 100%); }
+        .service-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #0056B3 0%, #0066cc 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        .service-icon svg {
+            width: 28px;
+            height: 28px;
+            fill: white;
+        }
+        .value-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #0056B3 0%, #0066cc 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 0.75rem;
+        }
+        .value-icon svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
+        }
+    
+        /* Scroll-reveal animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(36px);
+            transition: opacity 1.4s ease-out, transform 1.4s ease-out, box-shadow .3s ease;
+        }
+        .reveal.visible { opacity: 1; transform: none; }
+        @media (prefers-reduced-motion: reduce) {
+            .reveal { opacity: 1; transform: none; transition: none; }
+        }
+        /* Mobile menu */
+        @keyframes menuIn { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }
+        .menu-open { animation: menuIn .25s ease-out; }
+        /* Hero text over the carousel: plays once when the page opens */
+        @keyframes heroIn { from { opacity: 0; transform: translateY(36px); } to { opacity: var(--hero-op, 1); transform: none; } }
+        .hero-in { opacity: 0; animation: heroIn 1.6s ease-out forwards; }
+        @media (prefers-reduced-motion: reduce) { .hero-in { opacity: var(--hero-op, 1); animation: none; } }
+    </style>
+</head>
+<body class="font-sans antialiased">
+    <!-- Navigation (full width tabs + mobile hamburger) -->
+    <nav class="fixed top-0 w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-6 py-2 flex items-center justify-between">
+            <a href="index.html" class="flex items-center">
+                <img src="logo-blue.png" alt="Struvisor Logo" class="h-12">
+            </a>
+            <button id="menu-toggle" type="button" class="md:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-600" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+                <svg class="icon-open w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+                <svg class="icon-close hidden w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+            </button>
+        </div>
+        <ul id="nav-menu" class="hidden md:flex flex-col md:flex-row w-full border-t border-gray-200 divide-y md:divide-y-0 md:divide-x divide-gray-200 md:overflow-x-auto">
+                <li class="flex-1">
+                    <a href="#home" aria-current="page" class="block px-3 py-3 text-base text-center whitespace-nowrap gradient-bg text-white font-semibold">Home</a>
+                </li>
+                <li class="flex-1">
+                    <a href="mission.html" class="block px-3 py-3 text-base text-center whitespace-nowrap text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition">Mission & Vision</a>
+                </li>
+                <li class="flex-1">
+                    <a href="#services" class="block px-3 py-3 text-base text-center whitespace-nowrap text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition">Services</a>
+                </li>
+                <li class="flex-1">
+                    <a href="customers.html" class="block px-3 py-3 text-base text-center whitespace-nowrap text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition">Projects</a>
+                </li>
+                <li class="flex-1">
+                    <a href="#values" class="block px-3 py-3 text-base text-center whitespace-nowrap text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition">Values</a>
+                </li>
+                <li class="flex-1">
+                    <a href="contact.html" class="block px-3 py-3 text-base text-center whitespace-nowrap text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition">Contact</a>
+                </li>
+        </ul>
+    </nav>
+
+    <!-- Hero Carousel (logo + text fixed over the images) -->
+    <section id="home" class="pt-16 md:pt-28" aria-label="Struvisor">
+        <div id="carousel" class="relative w-full h-[30rem] md:h-[36rem] overflow-hidden bg-gray-800">
+            <img src="hero-building.png" alt="Building" class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100">
+            <img src="Bridge-Inspection.jpg" alt="Bridge inspection" class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0">
+
+            <!-- Dark overlay for text legibility -->
+            <div class="absolute inset-0 bg-black/45 z-10 pointer-events-none"></div>
+
+            <!-- Fixed hero text -->
+            <div class="absolute inset-0 z-20 flex items-center justify-center pointer-events-none">
+                <div class="container mx-auto px-6 text-center text-white">
+                    <img src="logo-white.png" alt="Struvisor" class="hero-in h-16 md:h-24 mx-auto mb-6" style="animation-delay:.3s">
+                    <h1 class="hero-in text-3xl md:text-5xl font-bold mb-4 drop-shadow-lg" style="animation-delay:.8s">Struvisor Asset and Project Management Inc.</h1>
+                    <p class="hero-in text-lg md:text-xl max-w-3xl mx-auto drop-shadow" style="animation-delay:1.3s">Excellence in Infrastructure Preservation</p>
+                    <p class="hero-in text-base md:text-lg mt-4 drop-shadow" style="animation-delay:1.8s; --hero-op:.9">Based in Halifax, Nova Scotia</p>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <button id="prev" type="button" class="absolute top-0 left-0 z-30 h-full px-4 text-white text-3xl hover:bg-black/20 transition" aria-label="Previous slide">&#10094;</button>
+            <button id="next" type="button" class="absolute top-0 right-0 z-30 h-full px-4 text-white text-3xl hover:bg-black/20 transition" aria-label="Next slide">&#10095;</button>
+
+            <!-- Dots -->
+            <div id="dots" class="absolute bottom-3 left-1/2 -translate-x-1/2 z-30 flex space-x-2"></div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-gray-900 mb-16">Core Services</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Project & Program Management</h3>
+                    <p class="text-gray-600">Comprehensive management of infrastructure projects and multi-project programs, including schedule, budget, and risk oversight, procurement, and capital planning support.</p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Asset Management Planning</h3>
+                    <p class="text-gray-600">Strategic asset management planning and capital prioritization.</p>
+                </div>    
+        
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Construction Quality Assurance</h3>
+                    <p class="text-gray-600">Project management from start to finish, including construction quality assurance oversight.</p>
+                </div>
+          
+                <!-- Service 4 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Construction Contract Administration</h3>
+                    <p class="text-gray-600">Administration of construction contracts in accordance with CCDC standards, delivered as part of professional project management services.</p>
+                </div>          
+                
+                <!-- Service 5 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3zm6 9.09c0 4-2.55 7.7-6 8.83-3.45-1.13-6-4.82-6-8.83V6.31l6-2.12 6 2.12v4.78zm-9.18-.5L7.4 12l3.6 3.6 6-6-1.41-1.41-4.59 4.59z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Emergency Repair Project Management</h3>
+                    <p class="text-gray-600">Rapid response and effective oversight of structural emergencies, delivered as a specialized project management service.</p>
+                </div>           
+                
+                <!-- Service 6 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3zm0 2.5l6 6V18h-2v-6H8v6H6v-6.5l6-6z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Bridge & Structural Inspections</h3>
+                    <p class="text-gray-600">OSIM-compliant and emergency inspections for bridges, along with inspection services for all other structures.</p>
+                </div>     
+            </div>
+        </div>
+    </section>
+                      
+    <!-- Values -->
+    <section id="values" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-gray-900 mb-16">Our Values</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
+                <div class="bg-white p-6 rounded-lg shadow text-center">
+                    <div class="value-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-gray-900">Safety First</h3>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow text-center">
+                    <div class="value-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-gray-900">Owner-minded Thinking</h3>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow text-center">
+                    <div class="value-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M12 2L2 12h3v8h6v-6h2v6h6v-8h3L12 2zm0 2.5l6 6V18h-2v-6H8v6H6v-6.5l6-6z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-gray-900">Community Stewardship</h3>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow text-center">
+                    <div class="value-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-gray-900">Integrity</h3>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow text-center">
+                    <div class="value-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-gray-900">Atlantic Canadian Pride</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="gradient-bg text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-12">Get in Touch</h2>
+            <div class="max-w-2xl mx-auto">
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-lg mb-8">
+                    <h3 class="text-2xl font-bold mb-4">Email Us</h3>
+                    <a href="mailto:info@struvisor.ca" class="text-xl hover:underline">info@struvisor.ca</a>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4">Connect on LinkedIn</h3>
+                    <a href="https://www.linkedin.com/company/Struvisor" target="_blank" rel="noopener noreferrer" class="text-xl hover:underline">linkedin.com/company/Struvisor</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <img src="logo-black.png" alt="Struvisor Logo" class="h-12 mx-auto mb-4">
+            <p class="text-gray-600">&copy; 2025 Struvisor Asset and Project Management Inc. All rights reserved.</p>
+            <p class="text-gray-500 mt-2">Structural Oversight, Client Insight</p>
+        </div>
+    </footer>
+
+    <!-- Carousel script (no external libraries) -->
+    <script>
+        (function () {
+            const carousel = document.getElementById('carousel');
+            const slides = carousel.querySelectorAll('.slide');
+            const dotsContainer = document.getElementById('dots');
+            const INTERVAL = 5000;
+            let current = 0;
+            let timer = null;
+
+            // Create dots
+            const dots = Array.from(slides).map((_, i) => {
+                const dot = document.createElement('button');
+                dot.type = 'button';
+                dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+                dot.className = 'w-3 h-3 rounded-full bg-white transition-opacity';
+                dot.addEventListener('click', () => { show(i); restart(); });
+                dotsContainer.appendChild(dot);
+                return dot;
+            });
+
+            function show(n) {
+                slides[current].classList.replace('opacity-100', 'opacity-0');
+                current = (n + slides.length) % slides.length;
+                slides[current].classList.replace('opacity-0', 'opacity-100');
+                dots.forEach((d, i) => { d.style.opacity = i === current ? '1' : '0.5'; });
+            }
+
+            function start() { timer = setInterval(() => show(current + 1), INTERVAL); }
+            function stop() { clearInterval(timer); }
+            function restart() { stop(); start(); }
+
+            document.getElementById('next').addEventListener('click', () => { show(current + 1); restart(); });
+            document.getElementById('prev').addEventListener('click', () => { show(current - 1); restart(); });
+
+            // Pause on hover
+            carousel.addEventListener('mouseenter', stop);
+            carousel.addEventListener('mouseleave', start);
+
+            show(0);
+            start();
+        })();
+    </script>
+    <script>
+        (function () {
+            /* ---------- Mobile hamburger menu ---------- */
+            var btn = document.getElementById('menu-toggle');
+            var menu = document.getElementById('nav-menu');
+            if (btn && menu) {
+                var iconOpen = btn.querySelector('.icon-open');
+                var iconClose = btn.querySelector('.icon-close');
+                var setMenu = function (open) {
+                    menu.classList.toggle('hidden', !open);
+                    menu.classList.toggle('menu-open', open);
+                    btn.setAttribute('aria-expanded', String(open));
+                    iconOpen.classList.toggle('hidden', open);
+                    iconClose.classList.toggle('hidden', !open);
+                };
+                btn.addEventListener('click', function () { setMenu(menu.classList.contains('hidden')); });
+                menu.querySelectorAll('a').forEach(function (a) {
+                    a.addEventListener('click', function () { setMenu(false); });
+                });
+                document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+            }
+
+            /* ---------- Scroll-reveal animation ---------- */
+            if (!('IntersectionObserver' in window)) return;
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+            var targets = [];
+            document.querySelectorAll('section .container > *').forEach(function (el) {
+                if (el.classList.contains('hero-in')) return;   // animated on load by CSS
+                if (el.matches('.grid')) {
+                    Array.prototype.forEach.call(el.children, function (c) { targets.push(c); });
+                } else {
+                    targets.push(el);
+                }
+            });
+
+            var io = new IntersectionObserver(function (entries) {
+                var n = 0;
+                entries.forEach(function (entry) {
+                    if (!entry.isIntersecting) return;
+                    var el = entry.target;
+                    var delay = n * 200;   // stagger elements that appear together
+                    n++;
+                    io.unobserve(el);
+                    el.style.transitionDelay = delay + 'ms';
+                    el.classList.add('visible');
+                    // restore normal hover transitions once the animation ends
+                    setTimeout(function () {
+                        el.classList.remove('reveal', 'visible');
+                        el.style.transitionDelay = '';
+                    }, delay + 1600);
+                });
+            }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+            targets.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+        })();
+    </script>
+</body>
+</html>
