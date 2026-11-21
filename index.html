@@ -81,6 +81,27 @@
         @keyframes heroIn { from { opacity: 0; transform: translateY(36px); } to { opacity: var(--hero-op, 1); transform: none; } }
         .hero-in { opacity: 0; animation: heroIn 1.6s ease-out forwards; }
         @media (prefers-reduced-motion: reduce) { .hero-in { opacity: var(--hero-op, 1); animation: none; } }
+    
+        /* Icon chips for lists */
+        .chip {
+            width: 36px; height: 36px; margin-right: 0.75rem; flex-shrink: 0;
+            border-radius: 9999px; background: rgba(0, 86, 179, 0.1);
+            display: flex; align-items: center; justify-content: center;
+        }
+        .chip svg { width: 20px; height: 20px; fill: #0056B3; }
+        /* Back-to-top button */
+        .to-top {
+            position: fixed; right: 1.25rem; bottom: 1.25rem; z-index: 40;
+            width: 48px; height: 48px; border: 0; border-radius: 9999px; cursor: pointer;
+            background: linear-gradient(135deg, #0056B3 0%, #003d82 100%); color: #fff;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+            opacity: 0; visibility: hidden; transform: translateY(12px);
+            transition: opacity .4s ease, transform .4s ease, visibility .4s;
+        }
+        .to-top.show { opacity: 1; visibility: visible; transform: none; }
+        .to-top:hover { filter: brightness(1.15); }
+        .to-top svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
     </style>
 </head>
 <body class="font-sans antialiased">
@@ -97,7 +118,7 @@
         </div>
         <ul id="nav-menu" class="hidden md:flex flex-col md:flex-row w-full border-t border-gray-200 divide-y md:divide-y-0 md:divide-x divide-gray-200 md:overflow-x-auto">
                 <li class="flex-1">
-                    <a href="#home" aria-current="page" class="block px-3 py-3 text-base text-center whitespace-nowrap gradient-bg text-white font-semibold">Home</a>
+                    <a href="#home" data-tab="home" aria-current="page" class="block px-3 py-3 text-base text-center whitespace-nowrap gradient-bg text-white font-semibold">Home</a>
                 </li>
                 <li class="flex-1">
                     <a href="services.html" class="block px-3 py-3 text-base text-center whitespace-nowrap text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition">Services</a>
@@ -106,18 +127,20 @@
                     <a href="about.html" class="block px-3 py-3 text-base text-center whitespace-nowrap text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition">About</a>
                 </li>
                 <li class="flex-1">
-                    <a href="#values" class="block px-3 py-3 text-base text-center whitespace-nowrap text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition">Our Values</a>
+                    <a href="#values" data-tab="values" class="block px-3 py-3 text-base text-center whitespace-nowrap text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition">Our Values</a>
                 </li>
                 <li class="flex-1">
-                    <a href="contact.html" class="block px-3 py-3 text-base text-center whitespace-nowrap text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition">Contact</a>
+                    <a href="contact.html" data-tab="contact" class="block px-3 py-3 text-base text-center whitespace-nowrap text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition">Contact</a>
                 </li>
         </ul>
     </nav>
 <!-- Hero Carousel (logo + text fixed over the images) -->
     <section id="home" class="pt-16 md:pt-28" aria-label="Struvisor">
         <div id="carousel" class="relative w-full min-h-[36rem] md:min-h-[40rem] overflow-hidden bg-gray-800 flex items-center justify-center">
-            <img src="hero-building.png" alt="Building" class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100">
-            <img src="Bridge-Inspection.jpg" alt="Bridge inspection" class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0">
+            <img src="everaldo-coelho-2GW4S08kd-8-unsplash.jpg" alt="Building" class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100">
+            <img src="gautam-krishnan-M0Fc5Zm4Xyo-unsplash.jpg" alt="Building" class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100">
+            <img src="vecteezy_business-man-construction-engineers-supervising-progress-of_33027793.jpg" alt="Bridge inspection" class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0">
+            <img src="sandip-roy-e1jiUWxjG_w-unsplash.jpg" alt="Building" class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100">
 
             <!-- Dark overlay for text legibility -->
             <div class="absolute inset-0 bg-black/50 z-10 pointer-events-none"></div>
@@ -363,6 +386,65 @@
 
             show(0);
             start();
+        })();
+    </script>
+    <!-- Back to top -->
+    <button id="to-top" type="button" class="to-top" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 15l7-7 7 7"/></svg>
+    </button>
+    <script>
+        (function () {
+            var b = document.getElementById('to-top');
+            if (!b) return;
+            function toggle() { b.classList.toggle('show', window.scrollY > 400); }
+            window.addEventListener('scroll', toggle, { passive: true });
+            toggle();
+            b.addEventListener('click', function () {
+                var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+            });
+        })();
+    </script>
+    <!-- Highlight the tab that matches the section being viewed -->
+    <script>
+        (function () {
+            var tabs = {};
+            document.querySelectorAll('#nav-menu a[data-tab]').forEach(function (a) { tabs[a.dataset.tab] = a; });
+            var sections = { values: document.getElementById('values'), contact: document.getElementById('contact') };
+            var nav = document.querySelector('nav');
+            var ACTIVE = ['gradient-bg', 'text-white', 'font-semibold'];
+            var INACTIVE = ['text-gray-700', 'hover:text-blue-600', 'hover:bg-gray-50', 'transition'];
+            var current = null, ticking = false;
+
+            function setActive(name) {
+                if (name === current) return;
+                current = name;
+                Object.keys(tabs).forEach(function (k) {
+                    var on = k === name;
+                    ACTIVE.forEach(function (c) { tabs[k].classList.toggle(c, on); });
+                    INACTIVE.forEach(function (c) { tabs[k].classList.toggle(c, !on); });
+                    if (on) tabs[k].setAttribute('aria-current', 'page');
+                    else tabs[k].removeAttribute('aria-current');
+                });
+            }
+
+            function update() {
+                ticking = false;
+                var line = nav.offsetHeight + window.innerHeight * 0.2;
+                var name = 'home';
+                if (sections.values && sections.values.getBoundingClientRect().top <= line) name = 'values';
+                if (sections.contact && sections.contact.getBoundingClientRect().top <= line) name = 'contact';
+                setActive(name);
+            }
+
+            function onScroll() {
+                if (!ticking) { ticking = true; requestAnimationFrame(update); }
+            }
+
+            window.addEventListener('scroll', onScroll, { passive: true });
+            window.addEventListener('resize', onScroll);
+            window.addEventListener('hashchange', onScroll);
+            update();
         })();
     </script>
 </body>
