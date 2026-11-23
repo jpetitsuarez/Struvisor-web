@@ -35,74 +35,7 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <style>
-        html { scroll-behavior: smooth; scroll-padding-top: 7rem; }
-        .gradient-bg { background: linear-gradient(135deg, #0056B3 0%, #003d82 100%); }
-        .service-icon {
-            width: 48px; height: 48px;
-            background: linear-gradient(135deg, #0056B3 0%, #0066cc 100%);
-            border-radius: 8px;
-            display: flex; align-items: center; justify-content: center;
-            margin-bottom: 1rem;
-        }
-        .service-icon svg { width: 28px; height: 28px; fill: white; }
-        .service-icon.lg { width: 56px; height: 56px; margin-bottom: 1.25rem; }
-        .service-icon.lg svg { width: 32px; height: 32px; }
-        .value-icon {
-            width: 40px; height: 40px;
-            background: linear-gradient(135deg, #0056B3 0%, #0066cc 100%);
-            border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            margin: 0 auto 0.75rem;
-        }
-        .value-icon svg { width: 24px; height: 24px; fill: white; }
-        .avatar {
-            width: 96px; height: 96px; flex-shrink: 0;
-            background: linear-gradient(135deg, #0056B3 0%, #003d82 100%);
-            border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-        }
-        .avatar svg { width: 56px; height: 56px; fill: white; }
-
-        /* Scroll-reveal animation */
-        .reveal {
-            opacity: 0;
-            transform: translateY(36px);
-            transition: opacity 1.4s ease-out, transform 1.4s ease-out, box-shadow .3s ease;
-        }
-        .reveal.visible { opacity: 1; transform: none; }
-        @media (prefers-reduced-motion: reduce) {
-            .reveal { opacity: 1; transform: none; transition: none; }
-        }
-        /* Mobile menu */
-        @keyframes menuIn { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }
-        .menu-open { animation: menuIn .25s ease-out; }
-        /* Hero text over the carousel: plays once when the page opens */
-        @keyframes heroIn { from { opacity: 0; transform: translateY(36px); } to { opacity: var(--hero-op, 1); transform: none; } }
-        .hero-in { opacity: 0; animation: heroIn 1.6s ease-out forwards; }
-        @media (prefers-reduced-motion: reduce) { .hero-in { opacity: var(--hero-op, 1); animation: none; } }
-    
-        /* Icon chips for lists */
-        .chip {
-            width: 36px; height: 36px; margin-right: 0.75rem; flex-shrink: 0;
-            border-radius: 9999px; background: rgba(0, 86, 179, 0.1);
-            display: flex; align-items: center; justify-content: center;
-        }
-        .chip svg { width: 20px; height: 20px; fill: #0056B3; }
-        /* Back-to-top button */
-        .to-top {
-            position: fixed; right: 1.25rem; bottom: 1.25rem; z-index: 40;
-            width: 48px; height: 48px; border: 0; border-radius: 9999px; cursor: pointer;
-            background: linear-gradient(135deg, #0056B3 0%, #003d82 100%); color: #fff;
-            display: flex; align-items: center; justify-content: center;
-            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
-            opacity: 0; visibility: hidden; transform: translateY(12px);
-            transition: opacity .4s ease, transform .4s ease, visibility .4s;
-        }
-        .to-top.show { opacity: 1; visibility: visible; transform: none; }
-        .to-top:hover { filter: brightness(1.15); }
-        .to-top svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="font-sans antialiased">
     <!-- Navigation (full width tabs + mobile hamburger) -->
@@ -145,10 +78,28 @@
     <!-- About -->
     <section class="py-20">
         <div class="container mx-auto px-6">
-            <p class="text-lg text-gray-700 max-w-4xl mx-auto mb-6 ">Struvisor Asset and Project Management Inc. is a Nova Scotia-based consulting practice providing project management, site inspections, OSIM bridge inspections, construction quality-assurance support, and owner-side construction site supervision for infrastructure and structural projects.</p>
-            <p class="text-lg text-gray-700 max-w-4xl mx-auto mb-6 ">We support infrastructure owners, municipalities, asset managers, engineering consultants, contractors, and subcontractors who need organized project delivery, dependable field coordination, and practical support from planning through construction and close-out.</p>
-            <p class="text-lg text-gray-700 max-w-4xl mx-auto mb-6 ">Our work spans bridges, marine and industrial facilities, buildings, municipal infrastructure, and other built assets. Struvisor helps clients manage structural evaluation projects, coordinate site inspections, administer contracts, coordinate technical resources, and deliver maintenance and rehabilitation work effectively.</p>
-            <p class="text-lg text-gray-700 max-w-4xl mx-auto mb-6 mb-0">We take a practical, client-focused approach: clear scopes, organized schedules, managed risks, coordinated subcontractors, controlled documentation, and transparent reporting. For projects requiring detailed structural analysis, engineering design, specialized testing, or professional engineering certification, Struvisor coordinates qualified consultants and subcontractors as required by the project scope.</p>
+            <p class="text-lg text-gray-700 max-w-4xl mx-auto mb-6  justify-text">Struvisor Asset and Project Management Inc. is a Nova Scotia-based consulting practice providing project management, site inspections, OSIM bridge inspections, construction quality-assurance support, and owner-side construction site supervision for infrastructure and structural projects.</p>
+            <p class="text-lg text-gray-700 max-w-4xl mx-auto mb-6  justify-text">We support infrastructure owners, municipalities, asset managers, engineering consultants, contractors, and subcontractors who need organized project delivery, dependable field coordination, and practical support from planning through construction and close-out.</p>
+            <p class="text-lg text-gray-700 max-w-4xl mx-auto mb-6  justify-text">Our work spans bridges, marine and industrial facilities, buildings, municipal infrastructure, and other built assets. Struvisor helps clients manage structural evaluation projects, coordinate site inspections, administer contracts, coordinate technical resources, and deliver maintenance and rehabilitation work effectively.</p>
+            <p class="text-lg text-gray-700 max-w-4xl mx-auto mb-6 mb-0 justify-text">We take a practical, client-focused approach: clear scopes, organized schedules, managed risks, coordinated subcontractors, controlled documentation, and transparent reporting. For projects requiring detailed structural analysis, engineering design, specialized testing, or professional engineering certification, Struvisor coordinates qualified consultants and subcontractors as required by the project scope.</p>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="bg-white p-10 rounded-lg shadow-lg hover:shadow-xl transition">
+                    <div class="service-icon lg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z"/></svg></div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Mission</h2>
+                    <p class="text-lg text-gray-700 justify-text">To provide practical project-management, site-inspection, and construction-support services that help clients deliver infrastructure and structural projects safely, efficiently, and with confidence.</p>
+                </div>
+                <div class="bg-white p-10 rounded-lg shadow-lg hover:shadow-xl transition">
+                    <div class="service-icon lg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg></div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Vision</h2>
+                    <p class="text-lg text-gray-700 justify-text">To be a trusted partner for infrastructure owners, engineering consultants, contractors, and subcontractors who need organized project delivery, dependable field coordination, and practical solutions for maintaining and improving built assets.</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -161,38 +112,20 @@
                 <div>
                     <h3 class="text-2xl font-bold text-gray-900">Daniel Yanez Sanchez, P.Eng., PMP</h3>
                     <p class="text-blue-700 font-semibold mb-4">Principal Consultant</p>
-                    <p class="text-gray-700 mb-4">Daniel is a registered Professional Engineer in Nova Scotia and a certified Project Management Professional with more than 20 years of experience in engineering, infrastructure asset management, project management, and project delivery.</p>
-                    <p class="text-gray-700">His background includes project management for bridge inspection, rehabilitation, and structural evaluation assignments; municipal capital programs; marine and industrial infrastructure; procurement; and contract administration. He founded Struvisor to provide practical, client-focused project-management, site-inspection, and construction-support services for infrastructure owners, engineering consultants, contractors, and subcontractors.</p>
+                    <p class="text-gray-700 mb-4 justify-text">Daniel is a registered Professional Engineer in Nova Scotia and a certified Project Management Professional with more than 20 years of experience in engineering, infrastructure asset management, project management, and project delivery.</p>
+                    <p class="text-gray-700 justify-text">His background includes project management for bridge inspection, rehabilitation, and structural evaluation assignments; municipal capital programs; marine and industrial infrastructure; procurement; and contract administration. He founded Struvisor to provide practical, client-focused project-management, site-inspection, and construction-support services for infrastructure owners, engineering consultants, contractors, and subcontractors.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Mission & Vision -->
-    <section class="py-20 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                <div class="bg-white p-10 rounded-lg shadow-lg hover:shadow-xl transition">
-                    <div class="service-icon lg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z"/></svg></div>
-                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Mission</h2>
-                    <p class="text-lg text-gray-700">To provide practical project-management, site-inspection, and construction-support services that help clients deliver infrastructure and structural projects safely, efficiently, and with confidence.</p>
-                </div>
-                <div class="bg-white p-10 rounded-lg shadow-lg hover:shadow-xl transition">
-                    <div class="service-icon lg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg></div>
-                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Vision</h2>
-                    <p class="text-lg text-gray-700">To be a trusted partner for infrastructure owners, engineering consultants, contractors, and subcontractors who need organized project delivery, dependable field coordination, and practical solutions for maintaining and improving built assets.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-        <!-- How we work -->
+    <!-- How we work -->
     <section class="py-20 bg-gray-50">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl font-bold text-center text-gray-900 mb-10">How We Work</h2>
-            <p class="text-lg text-gray-700 max-w-4xl mx-auto mb-6 ">Struvisor provides services from a project-management and coordination perspective. We focus on making complex projects easier to manage by defining clear objectives, coordinating the right resources, maintaining project controls, and keeping stakeholders informed.</p>
-            <p class="text-lg text-gray-700 max-w-4xl mx-auto mb-6 ">Our approach is safety-first and delivery-focused. Site work is planned with hazard assessments, access coordination, traffic-control considerations, and appropriate safety controls. We also support clients with procurement, contract administration, quality documentation, progress reporting, and project close-out.</p>
-            <p class="text-lg text-gray-700 max-w-4xl mx-auto mb-6 mb-0">Whether supporting an owner, consultant, contractor, or subcontractor, Struvisor adapts its role to the needs of the project and the client’s delivery model.</p>
+            <p class="text-lg text-gray-700 max-w-4xl mx-auto mb-6  justify-text">Struvisor provides services from a project-management and coordination perspective. We focus on making complex projects easier to manage by defining clear objectives, coordinating the right resources, maintaining project controls, and keeping stakeholders informed.</p>
+            <p class="text-lg text-gray-700 max-w-4xl mx-auto mb-6  justify-text">Our approach is safety-first and delivery-focused. Site work is planned with hazard assessments, access coordination, traffic-control considerations, and appropriate safety controls. We also support clients with procurement, contract administration, quality documentation, progress reporting, and project close-out.</p>
+            <p class="text-lg text-gray-700 max-w-4xl mx-auto mb-6 mb-0 justify-text">Whether supporting an owner, consultant, contractor, or subcontractor, Struvisor adapts its role to the needs of the project and the client’s delivery model.</p>
         </div>
     </section>
 
@@ -210,7 +143,7 @@
                     <li class="flex items-start"><span class="chip"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 22H2V10l7-3v2l5-2v3h3l1-8h3v20z"/></svg></span><span class="pt-1.5">Marine, industrial, and facility operators</span></li>
                 </ul>
             </div>
-            <p class="text-lg text-gray-700 max-w-4xl mx-auto mb-6 mt-8 mb-0">Whether a client needs additional project-management capacity, site-inspection or OSIM bridge-inspection services, construction quality-assurance support, or site supervision, Struvisor provides practical support tailored to the project.</p>
+            <p class="text-lg text-gray-700 max-w-4xl mx-auto mb-6 mt-8 mb-0 justify-text">Whether a client needs additional project-management capacity, site-inspection or OSIM bridge-inspection services, construction quality-assurance support, or site supervision, Struvisor provides practical support tailored to the project.</p>
         </div>
     </section>
 
@@ -232,79 +165,10 @@
         </div>
     </footer>
 
-    <script>
-        (function () {
-            /* ---------- Mobile hamburger menu ---------- */
-            var btn = document.getElementById('menu-toggle');
-            var menu = document.getElementById('nav-menu');
-            if (btn && menu) {
-                var iconOpen = btn.querySelector('.icon-open');
-                var iconClose = btn.querySelector('.icon-close');
-                var setMenu = function (open) {
-                    menu.classList.toggle('hidden', !open);
-                    menu.classList.toggle('menu-open', open);
-                    btn.setAttribute('aria-expanded', String(open));
-                    iconOpen.classList.toggle('hidden', open);
-                    iconClose.classList.toggle('hidden', !open);
-                };
-                btn.addEventListener('click', function () { setMenu(menu.classList.contains('hidden')); });
-                menu.querySelectorAll('a').forEach(function (a) {
-                    a.addEventListener('click', function () { setMenu(false); });
-                });
-                document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
-            }
-
-            /* ---------- Scroll-reveal animation ---------- */
-            if (!('IntersectionObserver' in window)) return;
-            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-            var targets = [];
-            document.querySelectorAll('section .container > *').forEach(function (el) {
-                if (el.classList.contains('hero-in')) return;   // animated on load by CSS
-                if (el.matches('.grid')) {
-                    Array.prototype.forEach.call(el.children, function (c) { targets.push(c); });
-                } else {
-                    targets.push(el);
-                }
-            });
-
-            var io = new IntersectionObserver(function (entries) {
-                var n = 0;
-                entries.forEach(function (entry) {
-                    if (!entry.isIntersecting) return;
-                    var el = entry.target;
-                    var delay = n * 200;   // stagger elements that appear together
-                    n++;
-                    io.unobserve(el);
-                    el.style.transitionDelay = delay + 'ms';
-                    el.classList.add('visible');
-                    // restore normal hover transitions once the animation ends
-                    setTimeout(function () {
-                        el.classList.remove('reveal', 'visible');
-                        el.style.transitionDelay = '';
-                    }, delay + 1600);
-                });
-            }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-
-            targets.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
-        })();
-    </script>
     <!-- Back to top -->
     <button id="to-top" type="button" class="to-top" aria-label="Back to top">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 15l7-7 7 7"/></svg>
     </button>
-    <script>
-        (function () {
-            var b = document.getElementById('to-top');
-            if (!b) return;
-            function toggle() { b.classList.toggle('show', window.scrollY > 400); }
-            window.addEventListener('scroll', toggle, { passive: true });
-            toggle();
-            b.addEventListener('click', function () {
-                var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-                window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
-            });
-        })();
-    </script>
+    <script src="main.js"></script>
 </body>
 </html>

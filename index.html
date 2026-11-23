@@ -35,74 +35,7 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <style>
-        html { scroll-behavior: smooth; scroll-padding-top: 7rem; }
-        .gradient-bg { background: linear-gradient(135deg, #0056B3 0%, #003d82 100%); }
-        .service-icon {
-            width: 48px; height: 48px;
-            background: linear-gradient(135deg, #0056B3 0%, #0066cc 100%);
-            border-radius: 8px;
-            display: flex; align-items: center; justify-content: center;
-            margin-bottom: 1rem;
-        }
-        .service-icon svg { width: 28px; height: 28px; fill: white; }
-        .service-icon.lg { width: 56px; height: 56px; margin-bottom: 1.25rem; }
-        .service-icon.lg svg { width: 32px; height: 32px; }
-        .value-icon {
-            width: 40px; height: 40px;
-            background: linear-gradient(135deg, #0056B3 0%, #0066cc 100%);
-            border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            margin: 0 auto 0.75rem;
-        }
-        .value-icon svg { width: 24px; height: 24px; fill: white; }
-        .avatar {
-            width: 96px; height: 96px; flex-shrink: 0;
-            background: linear-gradient(135deg, #0056B3 0%, #003d82 100%);
-            border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-        }
-        .avatar svg { width: 56px; height: 56px; fill: white; }
-
-        /* Scroll-reveal animation */
-        .reveal {
-            opacity: 0;
-            transform: translateY(36px);
-            transition: opacity 1.4s ease-out, transform 1.4s ease-out, box-shadow .3s ease;
-        }
-        .reveal.visible { opacity: 1; transform: none; }
-        @media (prefers-reduced-motion: reduce) {
-            .reveal { opacity: 1; transform: none; transition: none; }
-        }
-        /* Mobile menu */
-        @keyframes menuIn { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }
-        .menu-open { animation: menuIn .25s ease-out; }
-        /* Hero text over the carousel: plays once when the page opens */
-        @keyframes heroIn { from { opacity: 0; transform: translateY(36px); } to { opacity: var(--hero-op, 1); transform: none; } }
-        .hero-in { opacity: 0; animation: heroIn 1.6s ease-out forwards; }
-        @media (prefers-reduced-motion: reduce) { .hero-in { opacity: var(--hero-op, 1); animation: none; } }
-    
-        /* Icon chips for lists */
-        .chip {
-            width: 36px; height: 36px; margin-right: 0.75rem; flex-shrink: 0;
-            border-radius: 9999px; background: rgba(0, 86, 179, 0.1);
-            display: flex; align-items: center; justify-content: center;
-        }
-        .chip svg { width: 20px; height: 20px; fill: #0056B3; }
-        /* Back-to-top button */
-        .to-top {
-            position: fixed; right: 1.25rem; bottom: 1.25rem; z-index: 40;
-            width: 48px; height: 48px; border: 0; border-radius: 9999px; cursor: pointer;
-            background: linear-gradient(135deg, #0056B3 0%, #003d82 100%); color: #fff;
-            display: flex; align-items: center; justify-content: center;
-            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
-            opacity: 0; visibility: hidden; transform: translateY(12px);
-            transition: opacity .4s ease, transform .4s ease, visibility .4s;
-        }
-        .to-top.show { opacity: 1; visibility: visible; transform: none; }
-        .to-top:hover { filter: brightness(1.15); }
-        .to-top svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="font-sans antialiased">
     <!-- Navigation (full width tabs + mobile hamburger) -->
@@ -137,10 +70,9 @@
 <!-- Hero Carousel (logo + text fixed over the images) -->
     <section id="home" class="pt-16 md:pt-28" aria-label="Struvisor">
         <div id="carousel" class="relative w-full min-h-[36rem] md:min-h-[40rem] overflow-hidden bg-gray-800 flex items-center justify-center">
-            <img src="everaldo-coelho-2GW4S08kd-8-unsplash.jpg" alt="Building" class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100">
-            <img src="gautam-krishnan-M0Fc5Zm4Xyo-unsplash.jpg" alt="Building" class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100">
-            <img src="vecteezy_business-man-construction-engineers-supervising-progress-of_33027793.jpg" alt="Bridge inspection" class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0">
-            <img src="sandip-roy-e1jiUWxjG_w-unsplash.jpg" alt="Building" class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100">
+            <img src="Bridge 1.jpg" alt="Building" fetchpriority="high" decoding="async" class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100">
+            <img data-src="Buildings 1.jpg" alt="Building" decoding="async" class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0">
+            <img data-src="Engineers.jpg" alt="Bridge inspection" decoding="async" class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0">
 
             <!-- Dark overlay for text legibility -->
             <div class="absolute inset-0 bg-black/50 z-10 pointer-events-none"></div>
@@ -165,7 +97,7 @@
     <!-- Intro -->
     <section class="py-20 bg-gray-50">
         <div class="container mx-auto px-6">
-            <p class="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto text-center"> Struvisor provides project management, structural inspections, and construction-support services for bridges, buildings, marine and industrial facilities, and municipal infrastructure. We help owners, consultants, contractors, and subcontractors coordinate inspections, site access, safety, procurement, subcontractors, and project reporting. Struvisor also provides OSIM-based bridge inspections and construction quality-assurance and site-supervision support.</p>
+            <p class="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto text-center justify-text last-center"> Struvisor provides project management, structural inspections, and construction-support services for bridges, buildings, marine and industrial facilities, and municipal infrastructure. We help owners, consultants, contractors, and subcontractors coordinate inspections, site access, safety, procurement, subcontractors, and project reporting. Struvisor also provides OSIM-based bridge inspections and construction quality-assurance and site-supervision support.</p>
         </div>
     </section>
 
@@ -173,8 +105,8 @@
     <section id="services" class="py-20">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl font-bold text-center text-gray-900 mb-8">Services</h2>
-            <p class="text-lg text-gray-700 max-w-4xl mx-auto text-center mb-4">Struvisor provides project-management, program-management, site-inspection, OSIM bridge-inspection, asset-management, construction quality-assurance, site-supervision, procurement, and contract-administration services. Services are available to infrastructure owners, engineering consultants, contractors, and subcontractors.</p>
-            <p class="text-lg text-gray-700 max-w-4xl mx-auto text-center mb-12">For projects requiring detailed structural analysis, engineering design, or specialized testing, Struvisor can coordinate qualified consultants required by the project scope.</p>
+            <p class="text-lg text-gray-700 max-w-4xl mx-auto text-center mb-4 justify-text last-center">Struvisor provides project-management, program-management, site-inspection, OSIM bridge-inspection, asset-management, construction quality-assurance, site-supervision, procurement, and contract-administration services. Services are available to infrastructure owners, engineering consultants, contractors, and subcontractors.</p>
+            <p class="text-lg text-gray-700 max-w-4xl mx-auto text-center mb-12 justify-text last-center">For projects requiring detailed structural analysis, engineering design, or specialized testing, Struvisor can coordinate qualified consultants required by the project scope.</p>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition flex flex-col">
                     <div class="service-icon "><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg></div>
@@ -223,7 +155,7 @@
     <section id="who-we-help" class="py-20 bg-gray-50">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl font-bold text-center text-gray-900 mb-8">Who We Help</h2>
-            <p class="text-xl font-semibold text-gray-900 max-w-4xl mx-auto text-center mb-6">Struvisor supports infrastructure owners, municipalities, asset managers, engineering consultants, contractors, subcontractors, and facility operators who need organized project delivery, dependable site inspections, and practical construction-phase support.</p>
+            <p class="text-xl font-semibold text-gray-900 max-w-4xl mx-auto text-center mb-6 justify-text last-center">Struvisor supports infrastructure owners, municipalities, asset managers, engineering consultants, contractors, subcontractors, and facility operators who need organized project delivery, dependable site inspections, and practical construction-phase support.</p>
         </div>
     </section>
 
@@ -291,161 +223,10 @@
         </div>
     </footer>
 
-    <script>
-        (function () {
-            /* ---------- Mobile hamburger menu ---------- */
-            var btn = document.getElementById('menu-toggle');
-            var menu = document.getElementById('nav-menu');
-            if (btn && menu) {
-                var iconOpen = btn.querySelector('.icon-open');
-                var iconClose = btn.querySelector('.icon-close');
-                var setMenu = function (open) {
-                    menu.classList.toggle('hidden', !open);
-                    menu.classList.toggle('menu-open', open);
-                    btn.setAttribute('aria-expanded', String(open));
-                    iconOpen.classList.toggle('hidden', open);
-                    iconClose.classList.toggle('hidden', !open);
-                };
-                btn.addEventListener('click', function () { setMenu(menu.classList.contains('hidden')); });
-                menu.querySelectorAll('a').forEach(function (a) {
-                    a.addEventListener('click', function () { setMenu(false); });
-                });
-                document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
-            }
-
-            /* ---------- Scroll-reveal animation ---------- */
-            if (!('IntersectionObserver' in window)) return;
-            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-            var targets = [];
-            document.querySelectorAll('section .container > *').forEach(function (el) {
-                if (el.classList.contains('hero-in')) return;   // animated on load by CSS
-                if (el.matches('.grid')) {
-                    Array.prototype.forEach.call(el.children, function (c) { targets.push(c); });
-                } else {
-                    targets.push(el);
-                }
-            });
-
-            var io = new IntersectionObserver(function (entries) {
-                var n = 0;
-                entries.forEach(function (entry) {
-                    if (!entry.isIntersecting) return;
-                    var el = entry.target;
-                    var delay = n * 200;   // stagger elements that appear together
-                    n++;
-                    io.unobserve(el);
-                    el.style.transitionDelay = delay + 'ms';
-                    el.classList.add('visible');
-                    // restore normal hover transitions once the animation ends
-                    setTimeout(function () {
-                        el.classList.remove('reveal', 'visible');
-                        el.style.transitionDelay = '';
-                    }, delay + 1600);
-                });
-            }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-
-            targets.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
-        })();
-    </script>
-    <!-- Carousel script (no external libraries) -->
-    <script>
-        (function () {
-            const carousel = document.getElementById('carousel');
-            const slides = carousel.querySelectorAll('.slide');
-            const dotsContainer = document.getElementById('dots');
-            const INTERVAL = 5000;
-            let current = 0;
-            let timer = null;
-
-            const dots = Array.from(slides).map((_, i) => {
-                const dot = document.createElement('button');
-                dot.type = 'button';
-                dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
-                dot.className = 'w-3 h-3 rounded-full bg-white transition-opacity';
-                dot.addEventListener('click', () => { show(i); restart(); });
-                dotsContainer.appendChild(dot);
-                return dot;
-            });
-
-            function show(n) {
-                slides[current].classList.replace('opacity-100', 'opacity-0');
-                current = (n + slides.length) % slides.length;
-                slides[current].classList.replace('opacity-0', 'opacity-100');
-                dots.forEach((d, i) => { d.style.opacity = i === current ? '1' : '0.5'; });
-            }
-
-            function start() { timer = setInterval(() => show(current + 1), INTERVAL); }
-            function stop() { clearInterval(timer); }
-            function restart() { stop(); start(); }
-
-            document.getElementById('next').addEventListener('click', () => { show(current + 1); restart(); });
-            document.getElementById('prev').addEventListener('click', () => { show(current - 1); restart(); });
-            carousel.addEventListener('mouseenter', stop);
-            carousel.addEventListener('mouseleave', start);
-
-            show(0);
-            start();
-        })();
-    </script>
     <!-- Back to top -->
     <button id="to-top" type="button" class="to-top" aria-label="Back to top">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 15l7-7 7 7"/></svg>
     </button>
-    <script>
-        (function () {
-            var b = document.getElementById('to-top');
-            if (!b) return;
-            function toggle() { b.classList.toggle('show', window.scrollY > 400); }
-            window.addEventListener('scroll', toggle, { passive: true });
-            toggle();
-            b.addEventListener('click', function () {
-                var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-                window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
-            });
-        })();
-    </script>
-    <!-- Highlight the tab that matches the section being viewed -->
-    <script>
-        (function () {
-            var tabs = {};
-            document.querySelectorAll('#nav-menu a[data-tab]').forEach(function (a) { tabs[a.dataset.tab] = a; });
-            var sections = { values: document.getElementById('values'), contact: document.getElementById('contact') };
-            var nav = document.querySelector('nav');
-            var ACTIVE = ['gradient-bg', 'text-white', 'font-semibold'];
-            var INACTIVE = ['text-gray-700', 'hover:text-blue-600', 'hover:bg-gray-50', 'transition'];
-            var current = null, ticking = false;
-
-            function setActive(name) {
-                if (name === current) return;
-                current = name;
-                Object.keys(tabs).forEach(function (k) {
-                    var on = k === name;
-                    ACTIVE.forEach(function (c) { tabs[k].classList.toggle(c, on); });
-                    INACTIVE.forEach(function (c) { tabs[k].classList.toggle(c, !on); });
-                    if (on) tabs[k].setAttribute('aria-current', 'page');
-                    else tabs[k].removeAttribute('aria-current');
-                });
-            }
-
-            function update() {
-                ticking = false;
-                var line = nav.offsetHeight + window.innerHeight * 0.2;
-                var name = 'home';
-                if (sections.values && sections.values.getBoundingClientRect().top <= line) name = 'values';
-                if (sections.contact && sections.contact.getBoundingClientRect().top <= line) name = 'contact';
-                setActive(name);
-            }
-
-            function onScroll() {
-                if (!ticking) { ticking = true; requestAnimationFrame(update); }
-            }
-
-            window.addEventListener('scroll', onScroll, { passive: true });
-            window.addEventListener('resize', onScroll);
-            window.addEventListener('hashchange', onScroll);
-            update();
-        })();
-    </script>
+    <script src="main.js"></script>
 </body>
 </html>
